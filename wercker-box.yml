@@ -1,5 +1,5 @@
 name: meteor
-version: 0.5.0
+version: 0.5.1
 type: main
 platform: ubuntu@12.04
 description: box for building testing and deploying meteor apps
