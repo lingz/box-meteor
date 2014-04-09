@@ -1,5 +1,5 @@
 name: meteor
-version: 0.4.0
+version: 0.5.0
 type: main
 platform: ubuntu@12.04
 description: box for building testing and deploying meteor apps
@@ -8,7 +8,7 @@ keywords:
   - javascript
   - nodejs
 packages:
-  - meteor@0.6.4
+  - meteor@0.8.0
 script: |
 script: |-
   echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/10gen.list
@@ -24,7 +24,7 @@ script: |-
   echo 'verbose = true' | sudo tee -a /etc/mongodb.conf
   echo 'noprealloc = true' | sudo tee -a /etc/mongodb.conf
   echo 'smallfiles = true' | sudo tee -a /etc/mongodb.conf
-  /bin/sh install.sh
+  curl https://install.meteor.com/ | sh
 
   # Create and own /data directory
   sudo mkdir -p /data/db/
